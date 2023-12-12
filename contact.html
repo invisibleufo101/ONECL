@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+    <head>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <link rel="stylesheet" href="src/css/output.css"/>
+    </head>
+    <body>
+
+        <!-- NAVBAR -->
+        <header class="bg-white">
+            <div
+              class="flex items-center h-16 max-w-screen-xl gap-8 px-4 mx-auto sm:px-3 lg:px-4"
+            >
+                <a href="index.html">
+                    <img class="w-49 h-14" src="src/assets/onecl_logo.png"/>
+                </a>
+            
+                <div class="flex items-center justify-end flex-1 md:justify-between">
+                    <nav class="hidden md:block" aria-labelledby="header-navigation">
+                        <h2 class="sr-only" id="header-navigation">Header navigation</h2>
+                
+                        <ul class="flex items-center gap-6 text-sm">
+                            <li>
+                                <a class="text-gray-500 text-medium transition hover:underline hover:underline-offset-4 hover:text-black" href="index.html">
+                                    HOME
+                                </a>
+                            </li>
+                
+                            <li>
+                                <a class="text-gray-500 text-medium transition hover:underline hover:underline-offset-4 hover:text-black" href="contact.html">
+                                    CONTACT
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>  
+        <!-- END OF NAVBAR -->
+
+        <section class="bg-white">
+            <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center">Contact Us</h2>
+                <p class="mb-8 lg:mb-16 font-light text-center text-neutral-500 sm:text-xl">Got questions or concerns? Fill in the form and let us know!</p>
+                <form action="src/scripts/mailsender.php" method="POST" enctype="multipart/form-data" class="space-y-8">
+                    <div class="flex flex-col">
+
+                        <div class="flex">
+                            <div class="p-2 w-1/2 flex flex-col">
+                                <label class="font-semibold text-neutral-700 text-lg" for="first_name">First Name</label>
+                                <input class="h-12 mt-2 border-4 border-black" name="first_name" id="first_name" type="text" required/>
+                            </div>
+    
+                            <div class="p-2 w-1/2 flex flex-col">
+                                <label class="font-semibold text-neutral-700 text-lg" for="last_name">Last Name</label>
+                                <input class="h-12 mt-2 border-4 border-black" name="last_name" id="last_name" type="text" required/>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col p-2">
+                            <label class="font-semibold text-neutral-700 text-lg" for="email">Email</label>
+                            <input class="h-12 mt-2 border-4 border-black" name="email" id="email" type="email" required/>
+                        </div>
+
+                        <div class="flex flex-col p-2">
+                            <label class="font-semibold text-neutral-700 text-lg" for="subject">Subject</label>
+                            <input class="h-12 mt-2 border-4 border-black" name="subject" id="subject" type="text" required/>
+                        </div>
+
+                        <div class="flex flex-col p-2">
+                            <label class="font-semibold text-neutral-700 text-lg" for="message">Message</label>
+                            <textarea class="mt-2 resize-none border-4 border-black" name="message" id="message" rows="10" cols="4"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="px-2 text-lg font-semibold text-center rounded-lg sm:w-fit hover:text-gray-200" name="submit" value="submit">Send message</button>
+                </form>
+            </div>
+        </section>
+          
+
+        <!-- FOOTER -->
+        <footer class="bg-gray-100">
+            <div class="max-w-screen-xl mx-auto sm:px-6 lg:px-4 lg:pt-24"> 
+                <div class="lg:flex lg:items-end lg:justify-between">
+                    <div>
+                       
+                        <img class="w-70 h-20" src="src/assets/onecl_logo.png"/>
+                        <p class="max-w-md mx-auto mt-6 font-semibold leading-relaxed text-center text-gray-500 lg:text-left">
+                            Turn Once
+                        </p>
+                        <p class="max-w-md mx-auto font-semibold leading-relaxed text-center text-gray-500 lg:text-left">
+                            Go Everywhere
+                        </p>
+                        <p class="mx-auto leading-relaxed text-center text-blue-600 lg:text-left">weareonecl@gmail.com</a>
+                    </div>
+                </div>
+          
+                <p class="mt-12 text-sm text-center text-gray-400 lg:text-right">
+                    ONECL &copy; 2022 All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
